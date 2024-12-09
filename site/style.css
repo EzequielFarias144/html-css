@@ -1,0 +1,42 @@
+@charset "UTF-8";
+
+* {
+    margin: 0px;
+    padding: 0px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+html, body {
+    height: 100vh;
+    width: 100vw;
+    background-color: black;
+}
+
+@font-face {
+    font-family: 'Coco Gothic';
+    src: url('Coco Gothic\site\CocoGothic-Light_trial.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.home {
+    height: 95vh;
+    background-color: #c4b3dd;
+   
+}
+
+.botao {
+    border: none;
+    text-decoration: underline;
+    font-family: coco 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.menu {
+    height: 100vh;
+    background-color: red;
+}
+
+.conhecendomais {
+    height: 100vh;
+    background-color: aqua;
+}
