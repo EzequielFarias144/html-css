@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="form.css">
+    <title>Pedidos</title>
+</head>
+<body>
+    <nav class="navbar">
+        <ul class="nav-links">
+            <li>
+                <a href="index.html">Voltar</a>
+            </li>
+        </ul>
+    </nav>
+
+    <main>
+        <div class="container">
+            <h1>Seja bem-vindo</h1>
+            <h2>Faça seu pedido de novas receitas</h2>
+            <form action="cadastro.php" method="get" autocomplete="off">
+                <fieldset class="dados">
+                    <legend>Dados Pessoais</legend>
+                    <p>
+                        <label for="inome">Nome</label>
+                        <input type="text" name="nome" id="inome" minlength="5" maxlength="20" required>
+                    </p>
+                    <p>
+                        <label for="iemail">E-mail</label>
+                        <input type="email" name="email" id="iemail" autocomplete="email" required>
+                    </p>
+                    <p>
+                        <label for="itel">Telefone</label>
+                        <input type="tel" name="tel" id="itel" autocomplete="tel" 
+                        pattern="^\(\d{2}\)\d{4,5}-\d{4}$" required placeholder="(xx) xxxx-xxxx">
+                    </p>
+                </fieldset>
+                <fieldset>
+                    <legend>Sexo</legend>
+                    <label><input type="radio" name="sexo" id="isxmas" value="M"> Masculino</label><br>
+                    <label><input type="radio" name="sexo" id="isxfem" value="F"> Feminino</label>
+                </fieldset>
+                <fieldset>
+                    <legend>Receitas</legend>
+                    <label><input type="checkbox" name="esbas" id="iesbas"> Bolo de Abacaxi</label><br>
+                    <label><input type="checkbox" name="esfut" id="iesfut"> Bolo de Milho</label><br>
+                    <label><input type="checkbox" name="esnat" id="iesnat"> Bolo de Chocolate</label><br>
+                    <label><input type="checkbox" name="esten" id="iesten"> Bolo de Laranja</label>
+                </fieldset>
+                <div class="buttons">
+                    <input type="submit" value="Enviar">
+                    <input type="reset" value="Limpar">
+                </div>
+            </form>
+        </div>
+    </main>
+    <footer>
+        © Desenvolvido por Ezequiel Elisel
+    </footer>
+</body>
+</html>
