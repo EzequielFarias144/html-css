@@ -1,10 +1,17 @@
 @charset "UTF-8";
 
-/* Estilos gerais */
+@import url('https://fonts.googleapis.com/css2?family=Caesar+Dressing&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+:root{
+    --font-dm-sans:"DM Sans", sans-serif;
+    --fonte-titulo: "Caesar Dressing", sans-serif;
+}
+
+
 body {
     font-family: 'Arial', sans-serif;
-    background-color: #f4f4f9;
-    color: #333;
+    background-color: #fafafa;
+    color: #262626;
     margin: 0;
     padding: 0;
     line-height: 1.6;
@@ -17,14 +24,17 @@ header img {
 }
 
 nav {
-    background-color: #0077b6;
+    background-color: #ffffff;
     padding: 1rem;
     text-align: center;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 }
 
 nav a {
-    color: white;
+    color: #262626;
     text-decoration: none;
     margin: 0 1rem;
     font-weight: bold;
@@ -32,17 +42,17 @@ nav a {
 }
 
 nav a:hover {
-    color: #023e8a;
+    color: #0095f6;
 }
 
 hr {
     border: 0;
     height: 1px;
-    background: #ddd;
+    background: #dbdbdb;
     margin: 2rem 0;
 }
 
-/* Seções */
+
 section {
     padding: 2rem;
     max-width: 1200px;
@@ -50,8 +60,9 @@ section {
 }
 
 h1, h2 {
-    color: #0077b6;
+    color: #262626;
     text-align: center;
+    font-family: var(--fonte-titulo);
 }
 
 h1 {
@@ -68,6 +79,7 @@ p {
     font-size: 1.1rem;
     line-height: 1.8;
     margin-bottom: 1.5rem;
+    color: #555;
 }
 
 ul {
@@ -76,11 +88,12 @@ ul {
 }
 
 ul li {
-    background-color: #e9ecef;
+    background-color: #ffffff;
     margin: 0.5rem 0;
     padding: 1rem;
     border-radius: 8px;
     font-size: 1.1rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 /* Imagens */
@@ -91,7 +104,7 @@ img {
     margin: 1rem 0;
 }
 
-/* Grid de praias */
+
 .praias-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -122,6 +135,7 @@ img {
     font-weight: bold;
     padding: 1rem;
     text-align: center;
+    color: #0095f6;
 }
 
 .praia-descricao {
@@ -131,7 +145,7 @@ img {
     text-align: center;
 }
 
-/* Seção de vídeo */
+
 .video-section {
     display: flex;
     flex-direction: column;
@@ -152,19 +166,76 @@ img {
     text-align: center;
     font-size: 1.1rem;
     line-height: 1.8;
+    color: #555;
 }
 
-/* Rodapé */
+
 footer {
-    background-color: #0077b6;
-    color: white;
+    background-color: #ffffff;
+    color: #262626;
     text-align: center;
     padding: 1rem;
     margin-top: 2rem;
     font-size: 0.9rem;
+    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
 }
 
-/* Responsividade */
+
+#voltar_ao_topo {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #0095f6;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    font-size: 1.5rem;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    display: none; /* Escondido inicialmente */
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    opacity: 0.9;
+    z-index: 1000;
+}
+
+#voltar_ao_topo:hover {
+    background-color: #0077b6;
+    opacity: 1;
+    transform: scale(1.1); 
+}
+
+#voltar_ao_topo:active {
+    transform: scale(0.9); 
+}
+
+
+#voltar_ao_topo::after {
+    content: "↑";
+    font-weight: bold;
+    display: block;
+    margin-top: 2px;
+}
+
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 0.9;
+        transform: translateY(0);
+    }
+}
+
+#voltar_ao_topo.show {
+    display: block;
+    animation: fadeIn 0.5s ease;
+}
+
+
 @media (max-width: 768px) {
     nav a {
         display: block;

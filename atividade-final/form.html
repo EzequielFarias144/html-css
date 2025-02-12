@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agendamento</title>
+
+    <link rel="stylesheet" href="./src/styles/form.css">
+</head>
+<body>
+    <nav class="navbar">
+        <ul class="nav-links">
+            <li>
+                <a href="index.html">Voltar</a>
+            </li>
+        </ul>
+    </nav>
+
+    <main>
+        <div class="container">
+            <h1>Seja bem-vindo</h1>
+            <h2>Faça seu agendamento para conhecer as belas praias do Brasil</h2>
+            <form action="" method="get" autocomplete="off">
+                <fieldset class="dados">
+                    <legend>Dados Pessoais</legend>
+                    <p>
+                        <label for="inome">Nome</label>
+                        <input type="text" name="nome" id="inome" minlength="5" maxlength="20" required>
+                    </p>
+                    <p>
+                        <label for="iemail">E-mail</label>
+                        <input type="email" name="email" id="iemail" autocomplete="email" required>
+                    </p>
+                    <p>
+                        <label for="itel">Telefone</label>
+                        <input type="tel" name="tel" id="itel" autocomplete="tel" 
+                        pattern="^\(\d{2}\)\d{4,5}-\d{4}$" required placeholder="(xx) xxxx-xxxx">
+                    </p>
+                </fieldset>
+                <fieldset>
+                    <legend>Sexo</legend>
+                    <label><input type="radio" name="sexo" id="isxmas" value="M"> Masculino</label><br>
+                    <label><input type="radio" name="sexo" id="isxfem" value="F"> Feminino</label>
+                </fieldset>
+                <fieldset>
+                    <legend>Praias</legend>
+                    <label><input type="checkbox" name="esbas" id="iesbas">Praia de Ipanema</label><br>
+                    <label><input type="checkbox" name="esfut" id="iesfut">Praia de Carneiros</label><br>
+                    <label><input type="checkbox" name="esnat" id="iesnat"> Praia de Espelho</label><br>
+                    <label><input type="checkbox" name="esten" id="iesten"> Praia de Copacabana</label>
+                </fieldset>
+                <div class="buttons">
+                    <input type="submit" value="Enviar">
+                    <input type="reset" value="Limpar">
+                </div>
+            </form>
+        </div>
+    </main>
+    <footer>
+        © Desenvolvido por Eliude Farias
+    </footer>
+</body>
+</html>
