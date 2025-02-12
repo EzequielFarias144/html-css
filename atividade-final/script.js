@@ -7,7 +7,7 @@ window.addEventListener("scroll", () => {
     }
 });
 
-// Botão "Voltar ao topo"
+
 const backToTopButton = document.getElementById("voltar_ao_topo");
 
 window.addEventListener("scroll", () => {
@@ -25,7 +25,7 @@ backToTopButton.addEventListener("click", () => {
     });
 });
 
-// Animações ao rolar
+
 const sections = document.querySelectorAll("section");
 
 const checkVisibility = () => {
@@ -42,3 +42,13 @@ const checkVisibility = () => {
 
 window.addEventListener("scroll", checkVisibility);
 window.addEventListener("load", checkVisibility);
+
+
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', (e) => {
+        e.preventDefault();
+        const target = document.querySelector(anchor.getAttribute('href'));
+        target.scrollIntoView({ behavior: 'smooth' });
+    });
+});
+
