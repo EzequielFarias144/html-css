@@ -3,7 +3,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Caesar+Dressing&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
 
 :root{
-    --font-dm-sans:"DM Sans", sans-serif;
     --fonte-titulo: "Caesar Dressing", sans-serif;
 }
 
@@ -96,7 +95,7 @@ ul li {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-/* Imagens */
+
 img {
     max-width: 100%;
     height: auto;
